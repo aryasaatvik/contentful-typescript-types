@@ -1,5 +1,5 @@
 {
-  "name": "contentful-typescript-types",
+  "name": "@aryasaatvik/contentful-typescript-types",
   "version": "1.0.0",
   "description": "Generate TypeScript types from Contentful content types",
   "main": "dist/index.js",
@@ -14,14 +14,17 @@
     "type": "git",
     "url": "git+https://github.com/aryasaatvik/contentful-typescript-types.git"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "keywords": [
     "contentful",
     "typescript",
     "types",
     "content-type"
   ],
-  "author": "Saatvik Arya",
-  "license": "ISC",
+  "author": "Saatvik Arya <aryasaatvik@gmail.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/aryasaatvik/contentful-typescript-types/issues"
   },

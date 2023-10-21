@@ -1,5 +1,4 @@
 import { ContentTypeFieldValidation } from "contentful-management";
-import { renderFieldType } from "./render-field";
 import { getInterfaceName } from "../content-type";
 
 interface Item {
