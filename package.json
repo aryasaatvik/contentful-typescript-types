@@ -2,9 +2,12 @@
   "name": "contentful-typescript-types",
   "version": "1.0.0",
   "description": "Generate TypeScript types from Contentful content types",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "bin": "./dist/index.js",
   "scripts": {
+    "prebuild": "rm -rf dist && mkdir dist",
     "build": "tsc",
+    "postbuild": "sed -i '' '1s/^/#!\\/usr\\/bin\\/env node\\n/' dist/index.js",
     "start": "ts-node src/index.ts"
   },
   "repository": {
