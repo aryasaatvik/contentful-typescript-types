@@ -1,7 +1,7 @@
 import { createClient } from "contentful-management";
 import dotenv from "dotenv";
 import fs from "fs";
-import { ContentType, IContentTypeField, IContentTypeFieldValidation } from "./content-type";
+import { ContentType } from "./content-type";
 
 async function main() {
   dotenv.config(); 

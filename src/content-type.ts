@@ -1,6 +1,6 @@
 import { ContentFields } from "contentful-management";
 import { renderLinkType } from "./fields/render-link";
-import { renderFieldType } from "./fields/render";
+import { renderFieldType } from "./fields/render-field";
 
 export interface IContentTypeFieldValidation {
   linkContentType?: string[];
