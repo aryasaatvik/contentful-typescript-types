@@ -49,7 +49,13 @@ async function main() {
     return contentType;
   });
   const content = parsedContentTypes.map(contentType => contentType.toString()).join("\n");
-  fs.writeFileSync("src/contentful-types.d.ts", content);
+
+  let filename = "src/contentful-types.d.ts";
+  if (process.argv.length > 2) {
+    filename = process.argv[2];
+  }
+
+  fs.writeFileSync(filename, content);
 }
 
 main();
