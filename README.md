@@ -1,8 +1,6 @@
 # Contentful TypeScript Types
 
-This is a typescipt package that generates typescript types from the contentful content model.
-
-<!-- generate readme for a typescript project that generates type for contentful content models -->
+This is a typescipt package that generates typescript types from the contentful content models.
 
 ## Installation
 

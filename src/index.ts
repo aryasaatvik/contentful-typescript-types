@@ -26,29 +26,17 @@ async function main() {
   const parsedContentTypes = contentTypes.items.map(item => {
     const contentType = new ContentType(item.sys.id, item.name, item.description);
     item.fields.map(field => {
-      const validations = field.validations?.map(validation => {
-        const { linkContentType, in: inValues } = validation;
-        const result: IContentTypeFieldValidation = {};
-        if (linkContentType) {
-          result.linkContentType = linkContentType;
-        }
-        if (inValues) {
-          result.in = inValues;
-        }
-        return result;
-      });
-      const contentTypeField: IContentTypeField = {
-        id: field.id,
-        name: field.name,
-        type: field.type,
-        required: field.required,
-        validations: validations || [],
-      };
-      contentType.addField(contentTypeField);
+      contentType.addField(field);
     });
     return contentType;
   });
-  const content = parsedContentTypes.map(contentType => contentType.toString()).join("\n");
+
+  let content = parsedContentTypes.map(contentType => contentType.toString()).join("\n");
+  
+  if (content.includes('Asset') || content.includes('Asset[]')) {
+    const importAsset = `import { Asset } from "contentful-management";\n\n`;
+    content = importAsset + content;
+  }
 
   let filename = "src/contentful-types.d.ts";
   if (process.argv.length > 2) {
