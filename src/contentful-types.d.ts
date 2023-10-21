@@ -1,32 +1,32 @@
 import { Asset } from "contentful-management";
 
 export interface IComponentSeo {
-  internalName: string;
-  pageTitle: string;
+  internalName?: string;
+  pageTitle?: string;
   pageDescription: string;
   canonicalUrl: string;
-  nofollow: boolean;
-  noindex: boolean;
+  nofollow?: boolean;
+  noindex?: boolean;
   shareImages: Asset[];
 }
 
 export interface IPageLanding {
-  internalName: string;
+  internalName?: string;
   seoFields: IComponentSeo;
-  heroBannerHeadline: string;
+  heroBannerHeadline?: string;
   heroBannerHeadlineColor: string;
-  heroBannerImage: Asset;
+  heroBannerImage?: Asset;
   products: IPageProduct[];
 }
 
 export interface IPageProduct {
-  internalName: string;
-  slug: string;
+  internalName?: string;
+  slug?: string;
   seoFields: IComponentSeo;
-  name: string;
+  name?: string;
   description: string;
-  price: number;
-  featuredProductImage: Asset;
+  price?: number;
+  featuredProductImage?: Asset;
   productImages: Asset[];
   relatedProducts: IPageProduct[];
 }

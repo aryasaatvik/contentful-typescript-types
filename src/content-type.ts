@@ -66,7 +66,7 @@ export class ContentType implements IContentType {
     const interfaceName = getInterfaceName(this.id);
     let result = `export interface ${interfaceName} {\n`;
     this.fields.forEach(field => {
-      result += `  ${field.id}: ${field.type};\n`;
+      result += `  ${field.id}${field.required ? '?' : ''}: ${field.type};\n`;
     });
     result += '}\n';
     return result;
