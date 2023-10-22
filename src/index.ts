@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { createClient } from "contentful-management";
 import dotenv from "dotenv";
 import fs from "fs";
