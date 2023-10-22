@@ -1,5 +1,5 @@
 {
-  "name": "@aryasaatvik/contentful-typescript-types",
+  "name": "contentful-typescript-types",
   "version": "1.0.0",
   "description": "Generate TypeScript types from Contentful content types",
   "main": "dist/index.js",
@@ -15,7 +15,8 @@
     "url": "git+https://github.com/aryasaatvik/contentful-typescript-types.git"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
   "keywords": [
     "contentful",
