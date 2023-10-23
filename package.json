@@ -1,6 +1,6 @@
 {
   "name": "contentful-typescript-types",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generate TypeScript types from Contentful content types",
   "main": "dist/index.js",
   "bin": {
